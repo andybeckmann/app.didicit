@@ -3,15 +3,15 @@
 		<form class="app-dashboard-add" @submit.prevent="addItem">
 			<label>Keep learning</label>
 			<div>
-				<input v-model="description" placeholder="What's next?">
+				<input v-model="description" placeholder="So, what's next?">
 				<button>Add</button>
 			</div>
 		</form>
-		<ul class="app--dashboard-items">
+		<ul class="app--dashboard-items" v-if="userItems.length != 1">
 			<li 
 				v-for="(item, index) in userItems" 
 				:key="index" 
-				:index="index" 
+				:index="index"
 				ref="item" 
 				:class="{ 'completed' : item.completed }">
 				<button 
