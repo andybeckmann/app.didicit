@@ -115,6 +115,7 @@
 			position: relative;
 			background: linear-gradient(70deg, #fff, #fefefe);
 			margin-bottom: 5px;
+			transition: .5s ease opacity;
 
 			&.completed {
 				opacity: 0.25;
