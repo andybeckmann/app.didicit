@@ -66,7 +66,7 @@ export default {
 	button {
 		font-size: 19px;
 		padding: 15px 20px;
-		margin: 10px 10px 10px 0;
+		margin: 10px 0;
 		border-radius: 4px;
 		outline: none;
 		border: none;
@@ -109,7 +109,7 @@ export default {
 		min-height: 100vh;
 
 		.app--main {
-			max-width: 685px;
+			max-width: 712px;
 			margin: 0 auto;
 			padding: 25px;
 			border-radius: 4px;
