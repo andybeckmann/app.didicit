@@ -3,10 +3,10 @@
 		<nav v-if="user != null">
 			<ul>
 				<li>
-					<router-link to="/dashboard">Dashboard</router-link>
+					<router-link to="/dashboard">XX</router-link>
 				</li>
 				<li>
-					<router-link to="/">Settings</router-link>
+					<router-link to="/">XX</router-link>
 				</li>
 			</ul>
 		</nav>
