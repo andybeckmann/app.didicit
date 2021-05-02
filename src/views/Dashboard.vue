@@ -100,7 +100,7 @@
 		flex-flow: column-reverse;
 
 		li {
-			padding: 25px 25px 15px 75px;
+			padding: 25px 25px 25px 75px;
 			box-shadow: 0 5px 5px rgb(0 0 0 / 5%);
 			border-radius: 4px;
 			font-size: 22px;
