@@ -104,6 +104,9 @@ export default {
 
 		signIn() {
 			firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+				.then(() => {
+					this.$router.push('/dashboard')
+				})
 				.catch(error => {
 					this.signInInvalid = true
 					this.signInErrorMessage = error.message
@@ -214,6 +217,7 @@ export default {
 	max-width: 550px;
 	margin: 0 auto;
 	box-shadow: 0 25px 25px rgba(0, 0, 0, 0.10);
+	background: linear-gradient(70deg, #fff, #fefefe);
 	padding: 50px;
 	position: relative;
 
