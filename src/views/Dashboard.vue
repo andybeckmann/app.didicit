@@ -141,7 +141,7 @@
 				}
 
 				&.delete {
-					right: 15px;
+					right: 25px;
 					left: unset;
 					background: transparent;
 					color: #ccc;
