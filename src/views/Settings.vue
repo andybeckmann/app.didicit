@@ -168,8 +168,13 @@ export default {
 	}
 
 	h2 {
-		border-top: 1px solid #ccc;
 		padding-top: 25px;
+	}
+
+	p:nth-of-type(1) {
+		@media (min-width: 768px) {
+			margin-top: 30px;
+		}
 	}
 
 	span.form-success {
