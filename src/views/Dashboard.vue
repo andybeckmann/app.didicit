@@ -57,6 +57,7 @@
 							completed: false
 						}
 					)
+				this.description = null
 			},
 
 			deleteItem (index) {
