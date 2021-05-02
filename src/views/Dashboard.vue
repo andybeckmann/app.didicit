@@ -15,7 +15,7 @@
 				ref="item" 
 				:class="{ 'completed' : item.completed }">
 				<button 
-					@click="toggleItemStatus(index, item.description, item.completedToday)" 
+					@click="toggleItemStatus(index, item.description, item.completed)" 
 					:data-key="item" 
 					:class="{ 'completed' : item.completedToday }"
 				></button>
@@ -62,10 +62,6 @@
 							completed: !completed 
 						}
 					)
-			},
-
-			signOut () {
-				firebase.auth().signOut()
 			}
 		},
 
@@ -112,6 +108,10 @@
 
 			&.completed {
 				opacity: 0.25;
+
+				button {
+					background: #3d424b;
+				}
 			}
 
 			button {
