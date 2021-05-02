@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<form class="app-dashboard-add" @submit.prevent="addItem">
-			<label>I want to learn more about</label>
+			<label>Keep learning</label>
 			<div>
 				<input v-model="description" placeholder="What's next?">
 				<button>Add</button>
@@ -15,7 +15,7 @@
 				ref="item" 
 				:class="{ 'completed' : item.completed }">
 				<button 
-					@click="toggleItemStatus(index, item.completedToday)" 
+					@click="toggleItemStatus(index, item.description, item.completedToday)" 
 					:data-key="item" 
 					:class="{ 'completed' : item.completedToday }"
 				></button>
@@ -32,11 +32,11 @@
 	export default {
 		data () {
 			return {
-				authUser: null,
+				description: '',
+				completed: false,
 				userItems: [
 					{ 
 						description: '',
-						id: null,
 						completed: false
 					}
 				]
@@ -54,12 +54,11 @@
 					)
 			},
 
-			toggleItemStatus(index, completed) {
-				firebase.database().ref('users').child(this.user.uid)
-					.put(
-						index,
+			toggleItemStatus(index, description, completed) {
+				firebase.database().ref('users').child(this.user.uid + '/' + index)
+					.update(
 						{
-							description: this.description, 
+							description: description, 
 							completed: !completed 
 						}
 					)
@@ -97,40 +96,48 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
+		display: flex;
+		flex-flow: column-reverse;
 
 		li {
-			padding: 25px 25px 15px 65px;
+			padding: 25px 25px 15px 75px;
 			box-shadow: 0 5px 5px rgb(0 0 0 / 5%);
 			border-radius: 4px;
 			font-size: 22px;
 			line-height: 33px;
 			margin: 0;
 			position: relative;
+			background: linear-gradient(70deg, #fff, #fefefe);
+			margin-bottom: 5px;
 
 			&.completed {
-
+				opacity: 0.25;
 			}
 
 			button {
 				position: absolute;
-				left: 15px;
+				left: 25px;
 				top: 17px;
 				border-radius: 50%;
 				width: 25px;
 				height: 25px;
 				display: block;
 				padding: 0;
+				border: 4px solid #3d424b;
+				background: transparent;
 
 				&.completed {
-					background: red;
+					background: #3d424b;
 				}
 
 				&.delete {
 					right: 15px;
 					left: unset;
 					background: transparent;
-					color: #3d424b;
+					color: #ccc;
 					border: 0;
+					top: 13px;
+					font-size: 30px;
 				}
 			}
 		}
@@ -138,6 +145,10 @@
 
 	.app-dashboard-add {
 		text-align: center;
-		padding: 25px;
+		padding: 0 25px 25px;
+
+		button {
+			margin-right: 0;
+		}
 	}
 </style>
