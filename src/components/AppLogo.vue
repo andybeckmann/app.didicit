@@ -1,6 +1,6 @@
 <template>
 	<div class="app--header-logo">
-		<router-link to="/">didicit</router-link>
+		<router-link to="/">didic.it</router-link>
 	</div>
 </template>
 
