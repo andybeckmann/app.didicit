@@ -12,11 +12,15 @@
 
 <style lang="scss" scoped>
 	.app--footer {
-		background: #eee;
+		background: #242a34;
 		padding: 25px 0;
 		position: absolute;
 		bottom: 0;
 		text-align: center;
 		width: 100%;
+
+		a {
+			color: #fff;
+		}
 	}
 </style>
