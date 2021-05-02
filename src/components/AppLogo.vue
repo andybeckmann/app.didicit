@@ -19,6 +19,8 @@
 			text-decoration: none;
 			line-height: 24px;
 			font-size: 28px;
+			margin: 25px 20px;
+			display: block;
 		}
 	}
 </style>
