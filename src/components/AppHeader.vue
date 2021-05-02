@@ -60,7 +60,6 @@
 	.app--primary-header {
 		display: flex;
 		justify-content: space-between;
-		padding: 25px 0 25px 25px;
 		background: #242a34;
 	}
 </style>
