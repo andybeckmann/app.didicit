@@ -20,7 +20,12 @@
 					:class="{ 'completed' : item.completedToday }"
 				></button>
 				{{ item.description }}
-				<button class="delete">&times;</button>
+				<button 
+					class="delete"
+					@click="deleteItem(index)" 
+					:data-key="item"
+				>&times;
+				</button>
 			</li>
 		</ul>
 	</div>
@@ -52,6 +57,11 @@
 							completed: false
 						}
 					)
+			},
+
+			deleteItem (index) {
+				firebase.database().ref('users').child(this.user.uid + '/' + index)
+					.remove()
 			},
 
 			toggleItemStatus(index, description, completed) {
