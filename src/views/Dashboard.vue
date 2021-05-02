@@ -157,7 +157,11 @@
 
 	.app-dashboard-add {
 		text-align: center;
-		padding: 0 25px 25px;
+		padding: 0 0 25px;
+
+		@media (min-width: 768px) {
+			padding: 0 25px 25px;
+		}
 
 		button {
 			margin-right: 0;
