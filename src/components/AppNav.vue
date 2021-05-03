@@ -61,6 +61,7 @@ export default {
 				&.router-link-exact-active {
 					color: #eee;
 					background: #3d424b;
+					border-bottom: 5px solid #ffd266;
 
 					svg .icon {
 						stroke: #ffd266;
