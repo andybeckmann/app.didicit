@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-	// Global styles
+	// Fonts
 	@font-face { 
 		font-family: "FredokaOne-Regular"; 
 		src: url('assets/fonts/FredokaOne/FredokaOne-Regular.ttf');
@@ -29,6 +29,7 @@ export default {
 		font-style: normal;
 		font-display: swap;
 	}
+
 	@font-face {
 		font-family: "Commissioner";
 		src: url('assets/fonts/Commissioner/Commissioner.ttf');
@@ -36,6 +37,13 @@ export default {
 		font-style: normal;
 		font-display: swap;
 	}
+
+	// Global styles
+	::selection {
+		background: #ffd266;
+		color: #222831;
+	}
+
 	* {
 		box-sizing: border-box;
 	}
