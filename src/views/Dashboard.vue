@@ -50,14 +50,16 @@
 
 		methods: {
 			addItem () {
-				firebase.database().ref('users').child(this.user.uid)
-					.push(
-						{ 
-							description: this.description,
-							completed: false
-						}
-					)
-				this.description = null
+				if (this.description != '') {
+					firebase.database().ref('users').child(this.user.uid)
+						.push(
+							{ 
+								description: this.description,
+								completed: false
+							}
+						)
+					this.description = ''
+				}
 			},
 
 			deleteItem (index) {
