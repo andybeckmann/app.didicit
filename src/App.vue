@@ -22,6 +22,13 @@ export default {
 
 <style lang="scss">
 	// Global styles
+	@font-face { 
+		font-family: "FredokaOne-Regular"; 
+		src: url('assets/fonts/FredokaOne/FredokaOne-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 	* {
 		box-sizing: border-box;
 	}
@@ -29,6 +36,7 @@ export default {
 	body {
 		padding: 0;
 		margin: 0;
+		background: #242a34;
 	}
 
 	label {
