@@ -241,8 +241,8 @@ export default {
 	}
 
 	h1 {
-		font-family: serif;
 		font-size: 42px;
+		font-weight: 200;
 	}
 
 	form {

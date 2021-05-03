@@ -29,6 +29,13 @@ export default {
 		font-style: normal;
 		font-display: swap;
 	}
+	@font-face {
+		font-family: "Commissioner";
+		src: url('assets/fonts/Commissioner/Commissioner.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 	* {
 		box-sizing: border-box;
 	}
@@ -107,7 +114,7 @@ export default {
 
 	// #app styles
 	#app {
-		font-family: Avenir, Helvetica, Arial, sans-serif;
+		font-family: "Commissioner";
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		background: #eaeef3;
