@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 	.app--header-logo {
-		font-family: "Fredoka One";
+		font-family: "FredokaOne-Regular";
 
 		a {
 			color: #ffd266;
