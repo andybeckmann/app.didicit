@@ -77,10 +77,6 @@ export default {
 					0 5px 5px rgb(0 0 0 / 0.05),
 					inset 0px 5px 5px #eee;
 
-		@media (min-width: 768px) {
-			max-width: 540px;
-		}
-
 		&:focus {
 			border: 1px solid #3d424b;
 		}
