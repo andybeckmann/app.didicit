@@ -222,9 +222,9 @@ export default {
 
 	.app--main-auth-error-message {
 		background: #f2c0c0;
-		width: calc(100% - 100px);
+		width: 100%;
 		position: absolute;
-		top:-10px;
+		top: -75px;
 		padding: 15px;
 		border-radius: 4px;
 		text-align: center;

@@ -133,7 +133,7 @@
 			button {
 				position: absolute;
 				left: 25px;
-				top: 17px;
+				top: 20px;
 				border-radius: 50%;
 				width: 25px;
 				height: 25px;
@@ -154,6 +154,8 @@
 					border: 0;
 					top: 13px;
 					font-size: 30px;
+					width: auto;
+					height: auto;
 				}
 			}
 		}
