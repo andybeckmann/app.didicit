@@ -4,7 +4,9 @@
 			<label>Keep learning</label>
 			<div>
 				<input v-model="description" placeholder="So, what's next?">
-				<button>Add</button>
+				<button
+					:class="{ 'disabled' : isButtonDisabled() }"
+				>Add</button>
 			</div>
 		</form>
 		<ul class="app--dashboard-items" v-if="userItems.length != 1">
@@ -40,6 +42,7 @@
 		data () {
 			return {
 				description: '',
+				buttonStatus: true,
 				completed: false,
 				userItems: [
 					{ 
@@ -69,7 +72,7 @@
 					.remove()
 			},
 
-			toggleItemStatus(index, description, completed) {
+			toggleItemStatus (index, description, completed) {
 				firebase.database().ref('users').child(this.user.uid + '/' + index)
 					.update(
 						{
@@ -77,6 +80,14 @@
 							completed: !completed 
 						}
 					)
+			},
+
+			isButtonDisabled () {
+				if (this.description == '') {
+					return true
+				} else {
+					return false
+				}
 			}
 		},
 
@@ -100,6 +111,31 @@
 		input {
 			display: inline-block;
 			margin-right: 15px;
+		}
+	}
+
+	.app-dashboard-add {
+		text-align: center;
+		padding: 0 0 25px;
+
+		@media (min-width: 768px) {
+			padding: 0 25px 25px;
+		}
+
+		input {
+
+			@media (min-width: 768px) {
+				max-width: 540px;
+			}
+		}
+
+		button {
+			margin-right: 0;
+
+			&.disabled {
+				opacity: 0.25;
+				cursor: not-allowed;
+			}
 		}
 	}
 
@@ -152,32 +188,12 @@
 					background: transparent;
 					color: #ccc;
 					border: 0;
-					top: 13px;
+					top: 16px;
 					font-size: 30px;
 					width: auto;
 					height: auto;
 				}
 			}
-		}
-	}
-
-	.app-dashboard-add {
-		text-align: center;
-		padding: 0 0 25px;
-
-		@media (min-width: 768px) {
-			padding: 0 25px 25px;
-		}
-
-		input {
-
-			@media (min-width: 768px) {
-				max-width: 540px;
-			}
-		}
-
-		button {
-			margin-right: 0;
 		}
 	}
 </style>
