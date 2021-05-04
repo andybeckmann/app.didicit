@@ -51,7 +51,9 @@
 </template>
 
 <script>
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/database'
 
 const firebaseConfig = {
 	apiKey: "AIzaSyDXaLMBn4kqyq9vuTEy0BDjYxW47TQFuOw",
