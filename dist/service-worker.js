@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.31ccf974bd2fefabd01fa885c7de24b4.js"
+  "/precache-manifest.394aa87b32352f0a0cbf9d20a4affd15.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "didicit"});
