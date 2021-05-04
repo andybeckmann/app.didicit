@@ -169,7 +169,7 @@
 			padding: 0 25px 25px;
 		}
 
-		input[type=text] {
+		input {
 
 			@media (min-width: 768px) {
 				max-width: 540px;
