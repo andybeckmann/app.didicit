@@ -174,6 +174,7 @@ export default {
 
 	h2 {
 		padding-top: 25px;
+		border-top: 1px solid #ddd;
 	}
 
 	p:nth-of-type(1) {
