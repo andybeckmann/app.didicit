@@ -1,6 +1,6 @@
 # didicit.app
 
-didicit is a to-learn list for lifelong learning.
+didicit is a to-learn list for lifelong learning
 
 ## Screenshots
 
