@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "469e322a98623ab1cee7",
-    "url": "/css/app.83991552.css"
+    "revision": "405cfe4454c53e550105",
+    "url": "/css/app.e1b71030.css"
   },
   {
     "revision": "fee3ed47c25d48cd44998948e0ffc82d",
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fonts/FredokaOne-Regular.4a2f2ea4.ttf"
   },
   {
-    "revision": "3be934b1c3be5544a5dc368618d2fea2",
+    "revision": "1850f633e1ed2e7f8234c4b56990a997",
     "url": "/index.html"
   },
   {
-    "revision": "469e322a98623ab1cee7",
-    "url": "/js/app.024af385.js"
+    "revision": "405cfe4454c53e550105",
+    "url": "/js/app.26e49bf1.js"
   },
   {
     "revision": "a3732140cd331797d11a",
