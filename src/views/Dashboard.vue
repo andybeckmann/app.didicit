@@ -21,7 +21,9 @@
 					:data-key="item" 
 					:class="{ 'completed' : item.completedToday }"
 				></button>
-				{{ item.description }}
+				<div class="app--dashboard-items-item-text">
+					{{ item.description }}
+				</div>
 				<button 
 					class="delete"
 					@click="deleteItem(index)" 
@@ -163,6 +165,24 @@
 
 				button {
 					background: #3d424b;
+				}
+
+				.app--dashboard-items-item-text::before {
+					width: 100%;
+				}
+			}
+
+			.app--dashboard-items-item-text {
+				position: relative;
+				display: inline;
+
+				&::before {
+					content: '';
+					width: 0;
+					transition: .5s ease width;
+					border-bottom: 2px solid #3d424b;
+					position: absolute;
+					top: 14px;
 				}
 			}
 
